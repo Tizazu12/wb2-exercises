@@ -1,6 +1,7 @@
 "use strict"
-
+// given values
 var cel = 30;
+//we need to find fahrenheit
 var fah;
 
 // calculation
