@@ -1,7 +1,7 @@
 "use strict"
 
 //what do we start with
-var time = 9;
+var time = -1;
 
 
 // what do we need to compute

@@ -1,12 +1,15 @@
 "use strict"
 var payRate = 12.50;
 var hoursWorked = 20;
-var grosspay;
+var grossPay;
 var annualGrossPay;
+var taxHold;
+var net;
+
 // 20 hours 
 
-grosspay = payRate * hoursWorked;
-annualGrossPay = grosspay * 52;
+grossPay = payRate * hoursWorked;
+annualGrossPay = grossPay * 52;
 
 console.log(annualGrossPay);
 
@@ -16,8 +19,8 @@ var hoursWorked = 40;
 
 
 
-grosspay = payRate * hoursWorked;
-annualGrossPay = grosspay * 52;
+grossPay = payRate * hoursWorked;
+annualGrossPay = grossPay * 52;
 
 
 console.log(annualGrossPay);
@@ -27,21 +30,21 @@ var payRate = 17.30;
 var hoursWorked = 45;
 var overtime;
 
-if (hoursWorked <= 40 ){
-  grosspay = payRate * hoursWorked;
- } 
- else { 
+if (hoursWorked <= 40) {
+  grossPay = payRate * hoursWorked;
+}
+else {
   var overTime = hoursWorked - 40;
   var overTimeRate = payRate * 1.5;
   var basePay = 40 * payRate;
   var overTimePay = overTime * overTimeRate;
 
-  grosspay = basePay + overTimePay;
+  grossPay = basePay + overTimePay;
 }
 
 
 
-annualGrossPay = grosspay * 52;
+annualGrossPay = grossPay * 52;
 
 
 
@@ -68,10 +71,12 @@ var taxRate;
 // } else(annualIncomeRenge >= 75000) {taxRate= .20;}
 
 // 
+var stat;
 var single;
+var joint;
 
 if (stat == "single") {
-   if (annualGrossPay <= 12000) {
+  if (annualGrossPay <= 12000) {
     taxRate = 0.05;
   }
   else if (annualGrossPay <= 24999.99) {
@@ -101,11 +106,11 @@ if (stat == "joint") {
 }
 
 
-let taxHold = grosspay * taxRate;
-let net = grosspay - taxHold;
+var taxHold = grossPay * taxRate;
+var net = grossPay - taxHold;
 
 console.log("you worked " + hoursWorked + " hours this period.")
-console.log("because you earn" + payRate + "per hour, your is " + grosspay + "if you filling ststus is " 
-+ single)
-console.log()
+console.log("Because you earn " + payRate + " per hour, your gross pay is "+ grossPay)
+
+
 
